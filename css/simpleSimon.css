@@ -1,21 +1,209 @@
-.simon-btn {
-    height: 48px;
-    width: 48px;
+body {
+    background-image: url("../img/skyfilter.png"), url("../img/spaceStars.jpg");
+    margin: 0 auto;
+    background-position: 0px 0px, 0px 0px;
+    background-repeat: repeat, repeat;
+    animation: animate-background linear 50s infinite;
+}
+
+@keyframes animate-background {
+    from { background-position: 0px 0px, 0px 0px; }
+    to { background-position: -2000px 0px, -300px 0px; }
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.simonBoard {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: solid 5px black;
+    border-radius: 600px;
+    box-shadow: -10px 10px 7px 0px rgba(50, 50, 50, 0.5);
+}
+
+.padBtn {
+    margin: 0;
+    float: left;
+    position: relative;
+    width: 294px;
+    height: 294px;
+    border: solid 3px black;
+    z-index: 8;
+}
+
+.greenBtn {
+  background-color: green;
+    border-radius: 300px 0 0 0;
+}
+
+.greenBtn-active {
+    background-color: darkgreen !important;
+}
+
+.redBtn {
+    background-color: red;
+    border-radius: 0 300px 0 0;
+}
+
+.redBtn-active {
+    background-color: darkred !important;
+}
+
+.yellowBtn {
+    background-color: yellow;
+    border-radius: 0 0 0 300px ;
+
+}
+
+.yellowBtn-active {
+    background-color: darkgoldenrod !important;
+}
+
+.blueBtn {
+    background-color: blue;
+    border-radius: 0 0 300px 0;
+}
+
+.blueBtn-active {
+    background-color: darkblue !important;
+}
+
+.controls {
+    width: 245px;
+    height: 245px;
+    margin-left: 160px;
+    margin-top: 160px;
+    background-color: white;
+    border: solid 10px black;
+    border-radius: 150px;
+    z-index: 10;
+    position: absolute;
+    -webkit-box-shadow: -6px 8px 5px 0px rgba(50, 50, 50, 0.75);
+
+
+}
+
+.title {
+    margin-top: 30px;
+    font-size: 45px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.cntr {
+    display: inline-block;
+vertical-align: middle;
+}
+
+.display {
+    width: 60px;
+    height: 45px;
+    border: solid 2px black;
+    background-color: #333;
+    border-radius: 15px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 45px;
+
+
+}
+
+.startBtn, .strictBtn {
+    margin: 0px;
+    margin-left: 20px;
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    border: solid 2px black;
+    border-radius: 30px;
+    color: black;
+    font-size: 22px;
+    line-height: 55px;
+}
+
+.startBtn {
+    background-color: red;
+}
+
+.strictBtn {
+    background-color: yellow;
+}
+
+.outerSwitch {
+    width: 60px;
+    height: 30px;
+    border: solid 1px black;
+    background-color: black;
+}
+
+/*.innerSwitch {*/
+    /*width: 30px;*/
+    /*height: 30px;*/
+    /*background-color: gray;*/
+/*}*/
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.innerSwitch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    float: left;
+}
+
+.innerSwitch input {display:none;}
+
+.slider {
+    position: absolute;
     cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    -webkit-transition: .5s;
+    transition: .5s;
 }
 
-#red {
-    background: red;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 0px;
+    bottom: 0px;
+    background-color: gray;
+    -webkit-transition: .5s;
+    transition: .5s;
 }
 
-#blue {
-    background: blue;
+input:checked + .slider {
+    background-color: black;
 }
 
-#yellow {
-    background: yellow;
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
 }
 
-#green {
-    background: green;
+input:checked + .slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
+
+
+

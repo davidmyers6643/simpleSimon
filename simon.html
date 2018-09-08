@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/simpleSimon.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <div class="container">
+        <div class="simonBoard">
+            <div id="0" class="padBtn greenBtn"></div>
+            <div id="1" class="padBtn redBtn"></div>
+            <div id="2" class="padBtn yellowBtn"></div>
+            <div id="3" class="padBtn blueBtn"></div>
+
+            <div class="controls">
+                <div class="title">SIMON</div>
+                <div id="4" class="display cntr">00</div>
+                <div class="startBtn cntr">Start</div>
+                <div class="strictBtn cntr">Strict</div>
+                <p class="switchContainer"></p>
+                    <p class="off cntr">OFF</p>
+                <div class="outerSwitch cntr">
+
+                        <label class="innerSwitch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+
+                </div>
+                <p class="on cntr">ON</p>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script src="js/simpleSimon.js"></script>
+</body>
+</html>
